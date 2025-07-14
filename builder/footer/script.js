@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Also ensure the correct radio button is checked
+        // Also ensure the correct radio button is checked, just in case
         if (!radioButtons[activeIndex].checked) {
             radioButtons[activeIndex].checked = true;
         }
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Event Listeners ---
 
-    // Function to get the current active index
+    // Function to get the current active index from the checked radio button
     const getActiveIndex = () => {
         let activeIndex = 0;
         radioButtons.forEach((radio, index) => {
@@ -91,7 +91,9 @@ document.addEventListener('DOMContentLoaded', function() {
         return activeIndex;
     };
 
-    // Add event listeners to radio buttons to update on change
+    // Add event listeners to radio buttons to update on change.
+    // This is the single source of truth for slider changes.
+    // Clicking a <label> (the slide) will trigger this 'change' event.
     radioButtons.forEach((radio, index) => {
         radio.addEventListener('change', () => {
             if (radio.checked) {
@@ -99,29 +101,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Add event listeners to the slider items (labels) themselves
-    sliderItems.forEach((item, index) => {
-        item.addEventListener('click', (e) => {
-            // Don't interfere with clicks on links inside the slider item
-            if (e.target.tagName.toLowerCase() === 'a') {
-                return;
-            }
-            updateSlider(index);
-        });
-    });
     
-    // Add event listeners to the bullets
+    // Add event listeners to the bullets for direct navigation
     bullets.forEach((bullet, index) => {
         bullet.addEventListener('click', () => {
+            // When a bullet is clicked, we manually update the slider
+            // which will also check the correct radio button.
             updateSlider(index);
         });
     });
 
 
     // --- Initial Load ---
-    // To make the bullets work, you should add this simple style to your CSS:
-    // .bullets__item.active { background: white; }
     // We call the function once on load to set the initial state of the slider.
     updateSlider(getActiveIndex());
 });

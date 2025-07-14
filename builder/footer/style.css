@@ -1,761 +1,732 @@
 @font-face {
-    font-family: "e-Ukraine Head";
-    src: url(../../fonts/e-UkraineHead/e-UkraineHead-Bold.otf);
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap; 
-  }
+  font-family: "e-Ukraine Head";
+  src: url(../../fonts/e-UkraineHead/e-UkraineHead-Bold.otf);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: "e-Ukraine Head";
+  src: url(../../fonts/e-UkraineHead/e-UkraineHead-LOGO.otf);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: "e-Ukraine Head";
+  src: url(../../fonts/e-UkraineHead/e-UkraineHead-Regular.otf);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: "e-Ukraine";
+  src: url(../../fonts/e-Ukraine/e-Ukraine-Medium.otf);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: "e-Ukraine";
+  src: url(../../fonts/e-Ukraine/e-Ukraine-Light.otf);
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: "Fixel Text";
+  src: url(../../fonts/FixelText/FixelText-Medium.otf);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap; 
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  background-color: rgba(220, 228, 231, 1);
+}
+
+
+
+.goals-container {
+  box-sizing: border-box;
+  justify-self: center;
+  max-width: 1900px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
   
-  @font-face {
-    font-family: "e-Ukraine Head";
-    src: url(../../fonts/e-UkraineHead/e-UkraineHead-LOGO.otf);
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap; 
-  }
+  padding: 230px 85px;
+  overflow: hidden;
+}
+
+.goals-main-title {
+  color: rgba(43, 69, 70, 1);
+  text-align: center;
+  align-self: center;
+  font: 700 64px "e-Ukraine Head", Helvetica, sans-serif;
+  margin: 0;
+}
+
+.goals-subtitle {
+  color: rgba(43, 69, 70, 1);
+  text-align: center;
+  align-self: center;
+  margin-top: 32px;
+  font: 500 48px e-Ukraine, Helvetica, sans-serif;
+}
+
+.goals-cards-grid {
+  box-sizing: border-box;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-row-gap: 85px;
+  grid-column-gap: 50px;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.goal-card {
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(119, 158, 165, 1);
+  border-left-width: 10px;
+  border-left-style: solid;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: normal;
+  font-family: "Fixel Text", Helvetica, sans-serif;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+  max-height: 350px;
+  padding: 70px 30px;
+}
+
+.goal-title {
+  color: rgba(43, 69, 70, 1);
+  font-size: 32px;
+  margin: 0;
+}
+
+
+
+.goal-description {
+  color: rgba(119, 158, 165, 1);
+  font-size: 24px;
+  align-self: start;
+  margin: 14px 0 0 12px;
+}
+
+
+.team-background {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.56);
+}
+
+.team-container {
+  box-sizing: border-box;
+  display: flex;
+  align-self: center;
+  align-items: center; 
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1900px;
+  width: 100%;
+  padding: 135px 85px 200px;
+}
+
+@media (max-width: 1200px) {
   
-  @font-face {
-    font-family: "e-Ukraine Head";
-    src: url(../../fonts/e-UkraineHead/e-UkraineHead-Regular.otf);
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap; 
-  }
-  
-  @font-face {
-    font-family: "e-Ukraine";
-    src: url(../../fonts/e-Ukraine/e-Ukraine-Medium.otf);
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap; 
-  }
-  
-  @font-face {
-    font-family: "e-Ukraine";
-    src: url(../../fonts/e-Ukraine/e-Ukraine-Light.otf);
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap; 
-  }
-  
-  @font-face {
-    font-family: "Fixel Text";
-    src: url(../../fonts/FixelText/FixelText-Medium.otf);
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap; 
-  }
-  
-  
-  body {
+}
+
+.team-text {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  /*flex-shrink: 0;  Prevent text block from shrinking */
+}
+
+.team-text h3 {
+  font: 500 48px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  align-self: stretch;
+  margin: 0;
+}
+
+.team-text p {
+  font: 500 32px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  margin: 50px 0;
+}
+
+
+.team-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 16px 16px 16px 53px;
+  width: 490px;
+  height: 96px;
+  border-radius: 126px;
+  background-color: rgba(119, 158, 165, 1);
+
+  text-decoration: none;
+}
+
+.team-button p {
+  color: rgba(43, 69, 70, 1);
+  font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 4px;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 63px;
+  max-height: 63px;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(220, 228, 231, 1);
+  border-radius: 31.5px;
+}
+
+.arrow svg {
+  max-width: 23.97px;
+  max-height: 23.98px;
+}
+
+/*--------------------------------------------------------------
+2.0 Slider
+--------------------------------------------------------------*/
+.slider {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+  flex-shrink: 1; /* Allow slider to shrink if needed */
+  min-width: 738px; /* Prevent it from becoming smaller than one card */
+}
+
+.slider__radio {
+  display: none; 
+}
+
+.slider__holder {
+  position: relative;
+  /* This is the key change for width. It's now fixed to the card width */
+  width: 520px; 
+  height: 750px;
+  margin: 0 auto;
+  text-align: left; 
+}
+
+.slider__item {
+  position: absolute;
+  top: 0;
+  /* All items are positioned relative to the holder's top-left */
+  left: 0; 
+  display: block;
+  overflow: hidden;
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+/*--------------------------------------------------------------
+3.0 Bullets
+--------------------------------------------------------------*/
+.bullets {
+  z-index: 10;
+  display: block;
+  width: auto;
+  height: 10px;
+  margin: 50px 0 0;
+  text-align: center; 
+}
+
+.bullets__item {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+/* --- FIX: Added styles for active and hover states --- */
+.bullets__item:hover {
+  background: rgba(255, 255, 255, 0.7); 
+}
+.bullets__item.active {
+    background: #FFFFFF;
+}
+
+/*--------------------------------------------------------------
+4.0 Section
+--------------------------------------------------------------*/
+.section.slider {
+  position: relative;
+  /* FIX: Removed fixed percentage width */
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.team-item-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: (255, 255, 255, 1);
+  text-align: left;
+  width: 520px;
+  height: 750px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.team-item-image {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    background-color: rgba(220, 228, 231, 1);
-  }
-  
-  
-  
-  .goals-container {
-    box-sizing: border-box;
-    justify-self: center;
-    max-width: 1900px;
-    width: 100%;
-  
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    
-    padding: 230px 85px;
-    overflow: hidden;
-  }
-  
-  .goals-main-title {
-    color: rgba(43, 69, 70, 1);
-    text-align: center;
-    align-self: center;
-    font: 700 64px "e-Ukraine Head", Helvetica, sans-serif;
-    margin: 0;
-  }
-  
-  .goals-subtitle {
-    color: rgba(43, 69, 70, 1);
-    text-align: center;
-    align-self: center;
-    margin-top: 32px;
-    font: 500 48px e-Ukraine, Helvetica, sans-serif;
-  }
-  
-  .goals-cards-grid {
-    box-sizing: border-box;
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-row-gap: 85px;
-    grid-column-gap: 50px;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .goal-card {
-    box-sizing: border-box;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 1);
-    border-color: rgba(119, 158, 165, 1);
-    border-left-width: 10px;
-    border-left-style: solid;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    flex-shrink: 0;
-    align-items: normal;
-    font-family: "Fixel Text", Helvetica, sans-serif;
-    font-weight: 500;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
     width: 100%;
     height: 100%;
-    max-width: 550px;
-    max-height: 350px;
-    padding: 70px 30px;
-  }
-  
-  .goal-title {
+    align-content: center;
+    justify-content: center;
     color: rgba(43, 69, 70, 1);
-    font-size: 32px;
-    margin: 0;
-  }
-  
-  
-  
-  .goal-description {
-    color: rgba(119, 158, 165, 1);
-    font-size: 24px;
-    align-self: start;
-    margin: 14px 0 0 12px;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  .team-background {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-content: center;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.56);
-  }
-  
-  .team-container {
-    box-sizing: border-box;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    max-width: 1900px;
-    width: 100%;
-    padding: 135px 85px 200px;
-  }
-  
-  .team-text {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 45%;
-  }
-  
-  .team-text h3 {
-    font: 500 48px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-    align-self: stretch;
-    margin: 0;
-  }
-  
-  .team-text p {
-    font: 500 32px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-    margin: 50px 0;
-  }
-  
-  
+    font: 500 40px e-Ukraine Head, Helvetica, sans-serif;
+
+}
+
+.team-item-text {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(119, 158, 165, 1);
+  padding: 40px 32px;
+}
+
+.team-item-title {
+  margin: 0;
+  font: 500 32px e-Ukraine Head, Helvetica, sans-serif;
+}
+
+.team-item-description {
+  font: 300 32px e-Ukraine, Helvetica, sans-serif;
+}
+
+
+.news-container {
+  box-sizing: border-box;
+  justify-self: center;
+  max-width: 1900px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 200px 90px;
+  overflow: hidden;
+}
+
+.news-text {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: normal;
+  text-align: center;
+  flex-wrap: wrap;
+  color: rgba(43, 69, 70, 1);
+}
+
+.news-header {
+  font: 700 48px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  align-self: stretch;
+  margin: 0;
+}
+
+
+.news-paragraph {
+  font: 500 36px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  align-self: stretch;
+  margin: 0;
+
+  padding-top: 40px;
+}
+
+.news-articles {
+  margin-top: 165px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 50px;
+  column-gap: 30px;
+
+
+}
+
+
+.article {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: auto;
+  max-width: 430px;
+  height: 650px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.article-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-date {
+  color: rgba(43, 69, 70, 1);
+  font: 700 24px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  align-self: center;
+
+}
+
+.article-button {
+  background-color: rgba(119, 158, 165, 1);
+  color: rgba(43, 69, 70, 1);
+  font: 700 20px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  width: 125px;
+  height: 50px;
+  border-radius: 20px;
+  align-content: center;
+  text-align: center;
+}
+
+.article-button-text {
+  color: rgba(43, 69, 70, 1);
+  text-decoration: none;  
+}
+
+
+.article-image {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(220, 228, 231, 1);
+  width: 100%;
+  height: 330px;
+  border-radius: 20px;
+  margin: 35px 0px;
+  align-content: center;
+  justify-content: center;
+  color: rgba(43, 69, 70, 1);
+  font: 700 32px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.article-text {
+  display: flex; 
+  flex-direction: column; 
+  flex: 1;
+  font: 500 20px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  margin: 0 20px;
+}
+
+.article-description {
+  text-align: justify;
+}
+
+.article-footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+.footer-background {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(119, 158, 165, 1);
+}
+
+.footer-container {
+
+  align-self: center;
+  justify-content: center;
+  max-width: 1900px;
+  width: 100%;
+}
+
+.footer {
+  background-color: #779EA5;
+  display: flex;
+  margin-top: 120px;
+  width: auto;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: normal;
+  padding: 100px 40px;
+}
+
+
+.footer-mail {
+  align-self: center;
+  display: flex;
+  width: 100%;
+  align-items: normal;
+  gap: 30px 50px;
+  font-family: e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  color: rgba(43, 69, 70, 1);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px 100px 40px;
+  border-bottom: 1px solid rgba(43, 69, 70, 1);
+  box-sizing: border-box;
+}
+
+.footer-column ul {
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.footer-column li {
+  padding-left: 10px;
+}
+
+
+.contact-label {
+  font-size: 64px;
+  font-weight: 400;
+}
+
+
+
+.contact-email {
+  font-size: 48px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: auto 0;
+}
+
+
+.footer-links {
+  width: auto;
+  max-width: 100%;
+  margin: 100px 50px;
+}
+
+.footer-links-grid {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  line-height: normal;
+  width: 25%;
+  margin-left: 0px;
+}
+
+
+.footer-social {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: normal;
+  flex-wrap: wrap;
+  color: rgba(43, 69, 70, 1);
+  font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+
+.footer-section-title {
+  color: #2B4546BA;
+  font-size: 48px;
+  align-self: stretch;
+  margin: 0;
+}
+
+
+.social-link {
+  margin-top: 28px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: #2b4546;
+  white-space: nowrap;
+  font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+
+.contact-link {
+  color: rgba(43, 69, 70, 1);
+  font-size: 40px;
+  margin-top: 28px;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.phone-title {
+  align-self: stretch;
+  margin-top: 53px;
+}
+
+
+.phone-number {
+  color: rgba(43, 69, 70, 1);
+  font-size: 36px;
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+.phone-number:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: start;
+  color: rgba(43, 69, 70, 1);
+  font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+
+.footer-nav-link {
+  align-self: stretch;
+  margin-top: 25px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-nav-link:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 100%;
+  width: min-content;
+  margin: 70px 0 0 70px;
+}
+
+
+.footer-bottom-grid {
+  gap: 20px;
+  display: flex;
+}
+
+
+.footer-logo-column {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  line-height: normal;
+  width: 41%;
+  margin-left: 0px;
+}
+
+.footer-logo {
+  border-radius: 8px;
+  background-color: rgba(43, 69, 70, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(220, 228, 231, 1);
+  white-space: nowrap;
+  text-align: center;
+  width: 160px;
+  justify-content: center;
+  height: 160px;
+  margin: 0;
+  padding: 15px;
+  font: 700 55px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.footer-org-column {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  line-height: normal;
+  width: 59%;
+  margin-left: 20px;
+}
+
+.footer-org-name {
+  color: rgba(43, 69, 70, 1);
+  align-self: stretch;
+  margin: auto 0;
+  font: 700 36px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* --- FIX: Media query for responsive layout --- */
+@media (max-width: 1200px) {
+.team-container {
+  flex-direction: column;
+  padding: 100px 40px; /* Adjust padding for smaller screens */
+}
+
+.team-text {
+  width: 100%;
+  max-width: 600px; /* Constrain text width */
+  text-align: center;
+  align-items: center;
+}
+
+.section.slider {
+  margin-top: 50px;
+}
+}
+
+@media (max-width: 540px) {
   .team-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 16px 16px 16px 53px;
-    width: 490px;
-    height: 96px;
-    border-radius: 126px;
-    background-color: rgba(119, 158, 165, 1);
-  
-    text-decoration: none;
-  }
-  
-  .team-button p {
-    color: rgba(43, 69, 70, 1);
-    font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-    margin: 0;
-    padding-top: 4px;
-  }
-  
-  .arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 63px;
-    max-height: 63px;
-    width: 100%;
-    height: 100%;
-  
-    background-color: rgba(220, 228, 231, 1);
-    border-radius: 31.5px;
-  }
-  
-  .arrow svg {
-    max-width: 23.97px;
-    max-height: 23.98px;
-  }
-  
-  
-  
-  
-  
-  
-  .team-slider {
-    display: flex;
-    justify-content: center;
-    width: 55%;
-    height: auto;
-  }
-  
-  
-  
-
-
-
-  /*--------------------------------------------------------------
-    2.0 Slider
-
-
-  .card {
-    position: relative;
-    display: block;
-    border-radius: 8px;
-    background: #FFF;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05), 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
-          --------------------------------------------------------------*/
-
-    
-
-  /*--------------------------------------------------------------
-  2.0 Slider
-  --------------------------------------------------------------*/
-  .slider {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
-    .slider__radio {
-      display: none; }
-    .slider__holder {
-      position: relative;
-      width: inherit;
-      height: 750px;
-      margin: 0 auto;
-      text-align: left; }
-    .slider__item {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      overflow: hidden;
-      opacity: 1;
-      cursor: pointer;
-      }
-
-  
-  /*--------------------------------------------------------------
-  3.0 Bullets
-  --------------------------------------------------------------*/
-  .bullets {
-    z-index: 10;
-    display: block;
-    width: auto;
-    height: 10px;
-    margin: 50px 0 0;
-    text-align: center; }
-
-    .bullets__item {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      margin: 0 4px;
-      border-radius: 6px;
-      background: rgba(0, 0, 0, 0.2);
-      cursor: pointer; }
-      .bullets__item:hover {
-        background: #FFF; }
-  
-  /*--------------------------------------------------------------
-  4.0 Section
-  --------------------------------------------------------------*/
-  .section {
-    position: relative;
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  .team-item-content {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    background-color: (255, 255, 255, 1);
-    text-align: left;
-    width: 520px;
-    height: 750px;
-    border-radius: 20px;
-    overflow: hidden;
-  
-  }
-  
-  .team-item-image {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #FFFFFF;
       width: 100%;
-      height: 100%;
-      align-content: center;
-      justify-content: center;
-      color: rgba(43, 69, 70, 1);
-      font: 500 40px e-Ukraine Head, Helvetica, sans-serif;
-  
+      padding: 16px;
   }
-  
-  .team-item-text {
-    box-sizing: border-box;
-    width: 100%;
-    background-color: rgba(119, 158, 165, 1);
-    padding: 40px 32px;
-  }
-  
-  .team-item-title {
-    margin: 0;
-    font: 500 32px e-Ukraine Head, Helvetica, sans-serif;
-  }
-  
-  .team-item-description {
-    font: 300 32px e-Ukraine, Helvetica, sans-serif;
-  }
-  
-  
-  .news-container {
-    box-sizing: border-box;
-    justify-self: center;
-    max-width: 1900px;
-    width: 100%;
-  
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    padding: 200px 90px;
-    overflow: hidden;
-  }
-  
-  .news-text {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: normal;
-    text-align: center;
-    flex-wrap: wrap;
-    color: rgba(43, 69, 70, 1);
-  }
-  
-  .news-header {
-    font: 700 48px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-    align-self: stretch;
-    margin: 0;
-  }
-  
-  
-  .news-paragraph {
-    font: 500 36px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-    align-self: stretch;
-    margin: 0;
-  
-    padding-top: 40px;
-  }
-  
-  .news-articles {
-    margin-top: 165px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    row-gap: 50px;
-    column-gap: 30px;
-  
-  
-  }
-  
-  
-  .article {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    width: auto;
-    max-width: 430px;
-    height: 650px;
-    padding: 40px;
-    border-radius: 20px;
-  }
-  
-  .article-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .article-date {
-    color: rgba(43, 69, 70, 1);
-    font: 700 24px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-    align-self: center;
-  
-  }
-  
-  .article-button {
-    background-color: rgba(119, 158, 165, 1);
-    color: rgba(43, 69, 70, 1);
-    font: 700 20px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-    width: 125px;
-    height: 50px;
-    border-radius: 20px;
-    align-content: center;
-    text-align: center;
-  }
-  
-  .article-button-text {
-    color: rgba(43, 69, 70, 1);
-    text-decoration: none;  
-  }
-  
-  
-  .article-image {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(220, 228, 231, 1);
-    width: 100%;
-    height: 330px;
-    border-radius: 20px;
-    margin: 35px 0px;
-    align-content: center;
-    justify-content: center;
-    color: rgba(43, 69, 70, 1);
-    font: 700 32px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .article-text {
-    display: flex; 
-    flex-direction: column; 
-    flex: 1;
-    font: 500 20px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-    margin: 0 20px;
-  }
-  
-  .article-description {
-    text-align: justify;
-  }
-  
-  .article-footer {
-    margin-top: auto;
-    text-align: center;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .footer-background {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-content: center;
-    width: 100%;
-    background-color: rgba(119, 158, 165, 1);
-  }
-  
-  .footer-container {
-  
-    align-self: center;
-    justify-content: center;
-    max-width: 1900px;
-    width: 100%;
-  }
-  
-  .footer {
-  
-    
-    background-color: #779EA5;
-    display: flex;
-    margin-top: 120px;
-    width: auto;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: normal;
-    padding: 100px 40px;
-  }
-  
-  
-  .footer-mail {
-    align-self: center;
-    display: flex;
-    width: 100%;
-    align-items: normal;
-    gap: 30px 50px;
-    font-family: e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-    color: rgba(43, 69, 70, 1);
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0px 100px 40px;
-    border-bottom: 1px solid rgba(43, 69, 70, 1);
-    box-sizing: border-box;
-  }
-  
-  .footer-column ul {
-    padding-left: 45px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin: 40px 0;
-  }
-  
-  .footer-column li {
-    padding-left: 10px;
-  }
-  
-  
-  .contact-label {
-    font-size: 64px;
-    font-weight: 400;
-  }
-  
-  
-  
-  .contact-email {
-    font-size: 48px;
-    font-weight: 700;
-    text-decoration: underline;
-    margin: auto 0;
-  }
-  
-  
-  
-  
-  .footer-links {
-    width: auto;
-    max-width: 100%;
-    margin: 100px 50px;
-  }
-  
-  .footer-links-grid {
-    gap: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  
-  .footer-column {
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    line-height: normal;
-    width: 25%;
-    margin-left: 0px;
-  }
-  
-  
-  
-  
-  .footer-social {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: normal;
-    flex-wrap: wrap;
-    color: rgba(43, 69, 70, 1);
-    font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  
-  .footer-section-title {
-    color: #2B4546BA;
-    font-size: 48px;
-    align-self: stretch;
-    margin: 0;
-  }
-  
-  
-  .social-link {
-    margin-top: 28px;
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .social-link:hover {
-    text-decoration: underline;
-  }
-  
-  
-  .footer-contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    color: #2b4546;
-    white-space: nowrap;
-    font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  
-  .contact-link {
-    color: rgba(43, 69, 70, 1);
-    font-size: 40px;
-    margin-top: 28px;
-    text-decoration: none;
-  }
-  
-  .contact-link:hover {
-    text-decoration: underline;
-  }
-  
-  .phone-title {
-    align-self: stretch;
-    margin-top: 53px;
-  }
-  
-  
-  .phone-number {
-    color: rgba(43, 69, 70, 1);
-    font-size: 36px;
-    margin-top: 25px;
-    text-decoration: none;
-  }
-  
-  .phone-number:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-navigation {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: start;
-    color: rgba(43, 69, 70, 1);
-    font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  
-  .footer-nav-link {
-    align-self: stretch;
-    margin-top: 25px;
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .footer-nav-link:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-bottom {
-    max-width: 100%;
-    width: min-content;
-    margin: 70px 0 0 70px;
-  }
-  
-  
-  .footer-bottom-grid {
-    gap: 20px;
-    display: flex;
-  }
-  
-  
-  .footer-logo-column {
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    line-height: normal;
-    width: 41%;
-    margin-left: 0px;
-  }
-  
-  .footer-logo {
-    border-radius: 8px;
-    background-color: rgba(43, 69, 70, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgba(220, 228, 231, 1);
-    white-space: nowrap;
-    text-align: center;
-    width: 160px;
-    justify-content: center;
-    height: 160px;
-    margin: 0;
-    padding: 15px;
-    font: 700 55px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  
-  
-  
-  .footer-org-column {
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    line-height: normal;
-    width: 59%;
-    margin-left: 20px;
-  }
-  
-  
-  
-  .footer-org-name {
-    color: rgba(43, 69, 70, 1);
-    align-self: stretch;
-    margin: auto 0;
-    font: 700 36px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  
+}
