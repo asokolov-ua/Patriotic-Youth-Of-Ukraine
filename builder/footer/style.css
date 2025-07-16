@@ -91,14 +91,15 @@ body {
 .goals-cards-grid {
   box-sizing: border-box;
   margin-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  display: flex;
+  flex-flow: row wrap;
   grid-row-gap: 85px;
-  grid-column-gap: 50px;
+  grid-column-gap: 30px;
   width: 100%;
   height: auto;
   align-items: center;
   justify-items: center;
+  justify-content: space-evenly;
 }
 
 .goal-card {
@@ -116,9 +117,8 @@ body {
   font-family: "Fixel Text", Helvetica, sans-serif;
   font-weight: 500;
   width: 100%;
-  height: 100%;
+  height: 350px;
   max-width: 550px;
-  max-height: 350px;
   padding: 70px 30px;
 }
 
