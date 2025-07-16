@@ -122,6 +122,12 @@ body {
   padding: 70px 30px;
 }
 
+.goal-title-grid {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+}
+
 .goal-title {
   color: rgba(43, 69, 70, 1);
   font-size: 32px;
@@ -130,11 +136,12 @@ body {
 
 
 
+
 .goal-description {
   color: rgba(119, 158, 165, 1);
   font-size: 24px;
   align-self: start;
-  margin: 14px 0 0 12px;
+  margin: 20px 20px 0 20px;
 }
 
 
