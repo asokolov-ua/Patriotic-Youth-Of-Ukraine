@@ -56,6 +56,28 @@ body {
 }
 
 
+.container {
+  box-sizing: border-box;
+  justify-self: center;
+  max-width: 1900px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  
+  padding: 200px 4.5%;
+  overflow: hidden;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+}
 
 .goals-container {
   box-sizing: border-box;
@@ -122,6 +144,8 @@ body {
   padding: 70px 30px;
 }
 
+
+
 .goal-title-grid {
   display: flex;
   flex-flow: row nowrap;
@@ -146,11 +170,6 @@ body {
 
 
 .team-background {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
-  width: 100%;
   background-color: rgba(255, 255, 255, 0.56);
 }
 
@@ -166,9 +185,6 @@ body {
   padding: 135px 85px 200px;
 }
 
-@media (max-width: 1200px) {
-  
-}
 
 .team-text {
   display: flex;
@@ -350,17 +366,7 @@ body {
 
 
 .news-container {
-  box-sizing: border-box;
-  justify-self: center;
-  max-width: 1900px;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
   padding: 200px 90px;
-  overflow: hidden;
 }
 
 .news-text {
@@ -712,8 +718,25 @@ body {
   font: 700 36px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
-/* --- FIX: Media query for responsive layout --- */
-@media (max-width: 1200px) {
+
+
+
+
+
+
+
+@media (max-width: 1600px) {
+  .team-container {
+    transform: scale(.9)
+  }
+
+  .section.slider {
+    transform: scale(.9);
+  }
+
+}
+
+@media (max-width: 1400px) {
 .team-container {
   flex-direction: column;
   padding: 100px 40px; /* Adjust padding for smaller screens */
@@ -721,19 +744,73 @@ body {
 
 .team-text {
   width: 100%;
-  max-width: 600px; /* Constrain text width */
+  max-width: 1100px; /* Constrain text width */
   text-align: center;
   align-items: center;
 }
 
 .section.slider {
+  transform: scale(1);
   margin-top: 50px;
 }
+}
+
+@media (max-width: 800px) {
+  .section.slider {
+    transform: scale(.8);
+  }
+
+  .team-container {
+    transform: scale(.8)
+  }
+} 
+
+@media (max-width: 650px) {
+
+  .section.slider {
+    transform: scale(.7);
+  }
+}
+
+@media (max-width: 620px) {
+  .goal-card {
+    transform: scale(.8);
+  }
+
+  .section.slider {
+    transform: scale(.6);
+  }
+
+  .team-container {
+    transform: scale(.8)
+  }
 }
 
 @media (max-width: 540px) {
   .team-button {
       width: 100%;
       padding: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .goals-main-title {
+    font-size: 32px;
+  }
+
+  .goals-subtitle {
+    font-size: 24px;
+  }
+
+  .goals-cards-grid {
+    margin-top: 10vw;
+  }
+
+  .goal-title {
+    font-size: 16px;
+  }
+
+  .goal-description {
+    font-size: 12px;
   }
 }
