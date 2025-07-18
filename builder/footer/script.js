@@ -34,31 +34,31 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (diff === 1) {
                 // Slide to the right
                 item.style.zIndex = '1';
-                item.style.transform = 'translateX(100px) scale(0.85)';
+                item.style.transform = 'translateX(clamp(50px, 5.2632vw, 100px)) scale(0.85)';
                 item.style.opacity = '0.6';
             } else if (diff === -1) {
                 // Slide to the left
                 item.style.zIndex = '1';
-                item.style.transform = 'translateX(-100px) scale(0.85)';
+                item.style.transform = 'translateX(clamp(-100px, -5.2632vw, -50px)) scale(0.85)';
                 item.style.opacity = '0.6';
             } else if (diff === 2) {
                 // Second slide to the right
                 item.style.zIndex = '0';
-                item.style.transform = 'translateX(200px) scale(0.65)';
+                item.style.transform = 'translateX(clamp(100px, 10.5263vw, 200px)) scale(0.65)';
                 item.style.opacity = '0.3';
             } else if (diff === -2) {
                 // Second slide to the left
                 item.style.zIndex = '0';
-                item.style.transform = 'translateX(-200px) scale(0.65)';
+                item.style.transform = 'translateX(clamp(-200px, -10.5263vw, -100px)) scale(0.65)';
                 item.style.opacity = '0.3';
             } else {
                 // Hidden slides (far left or far right)
                 item.style.zIndex = '-1';
                 item.style.opacity = '0';
                 if (diff > 0) {
-                    item.style.transform = 'translateX(200px) scale(0.65)';
+                    item.style.transform = 'translateX(clamp(100px, 10.5263vw, 200px)) scale(0.65)';
                 } else {
-                    item.style.transform = 'translateX(-200px) scale(0.65)';
+                    item.style.transform = 'translateX(clamp(-200px, -10.5263vw, -100px)) scale(0.65)';
                 }
             }
         });

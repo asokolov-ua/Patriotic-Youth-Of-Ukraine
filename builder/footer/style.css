@@ -47,10 +47,12 @@
 }
 
 
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: clamp(2px, 0.8421vw, 16px);
   margin: 0;
   background-color: rgba(220, 228, 231, 1);
 }
@@ -67,7 +69,7 @@ body {
   align-self: center;
   align-items: center;
   
-  padding: 200px 4.5%;
+  padding: clamp(95px, 10%, 200px) clamp(40px, 4.5%, 85px);
   overflow: hidden;
 }
 
@@ -79,26 +81,11 @@ body {
   width: 100%;
 }
 
-.goals-container {
-  box-sizing: border-box;
-  justify-self: center;
-  max-width: 1900px;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  
-  padding: 230px 85px;
-  overflow: hidden;
-}
-
 .goals-main-title {
   color: rgba(43, 69, 70, 1);
   text-align: center;
   align-self: center;
-  font: 700 64px "e-Ukraine Head", Helvetica, sans-serif;
+  font: 700 4em "e-Ukraine Head", Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -106,17 +93,17 @@ body {
   color: rgba(43, 69, 70, 1);
   text-align: center;
   align-self: center;
-  margin-top: 32px;
-  font: 500 48px e-Ukraine, Helvetica, sans-serif;
+  margin-top: clamp(16px, 1.70vw, 32px);
+  font: 500 3em e-Ukraine, Helvetica, sans-serif;
 }
 
 .goals-cards-grid {
   box-sizing: border-box;
-  margin-top: 100px;
+  margin-top: clamp(50px, 5.2vw, 100px);
   display: flex;
   flex-flow: row wrap;
-  grid-row-gap: 85px;
-  grid-column-gap: 30px;
+  grid-row-gap: clamp(40px, 4.5vw, 85px);
+  grid-column-gap: clamp(15px, 1.58vw, 30px);
   width: 100%;
   height: auto;
   align-items: center;
@@ -126,10 +113,10 @@ body {
 
 .goal-card {
   box-sizing: border-box;
-  border-radius: 15px;
+  border-radius: clamp(7px, .79vw, 15px);
   background-color: rgba(255, 255, 255, 1);
   border-color: rgba(119, 158, 165, 1);
-  border-left-width: 10px;
+  border-left-width: clamp(4px, .525vw, 10px);
   border-left-style: solid;
   display: flex;
   flex-grow: 1;
@@ -139,9 +126,9 @@ body {
   font-family: "Fixel Text", Helvetica, sans-serif;
   font-weight: 500;
   width: 100%;
-  height: 350px;
-  max-width: 550px;
-  padding: 70px 30px;
+  height: clamp(175px, 18.42vw, 350px);
+  max-width: clamp(275px, 28.95vw, 550px);
+  padding: clamp(35px, 3.685vw, 70px) clamp(15px, 1.58vw, 30px);
 }
 
 
@@ -149,24 +136,25 @@ body {
 .goal-title-grid {
   display: flex;
   flex-flow: row nowrap;
-  gap: 10px;
+  gap: clamp(4px, 0.525vw, 10px);
 }
 
 .goal-title {
   color: rgba(43, 69, 70, 1);
-  font-size: 32px;
+  font-size: 2em;
   margin: 0;
 }
 
-
-
-
 .goal-description {
   color: rgba(119, 158, 165, 1);
-  font-size: 24px;
+  font-size: 1.5em;
   align-self: start;
-  margin: 20px 20px 0 20px;
+  margin: clamp(10px, 1.05vw, 20px) clamp(10px, 1.05vw, 20px) 0 clamp(10px, 1.05vw, 20px);
 }
+
+
+
+
 
 
 .team-background {
@@ -178,11 +166,11 @@ body {
   display: flex;
   align-self: center;
   align-items: center; 
-  justify-content: space-between;
-  gap: 50px;
+  justify-content: space-around;
+  gap: clamp(25px, 2.63vw, 50px);
   max-width: 1900px;
   width: 100%;
-  padding: 135px 85px 200px;
+  padding: clamp(65px, 7.1vw, 135px) clamp(40px, 4.47vw, 85px) clamp(100px, 10.52vw, 200px);
 }
 
 
@@ -194,14 +182,14 @@ body {
 }
 
 .team-text h3 {
-  font: 500 48px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 3em e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
   align-self: stretch;
   margin: 0;
 }
 
 .team-text p {
-  font: 500 32px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-  margin: 50px 0;
+  font: 500 2em Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  margin: clamp(25px, 2.63vw, 50px) 0;
 }
 
 
@@ -210,10 +198,10 @@ body {
   flex-direction: row;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 16px 16px 16px 53px;
-  width: 490px;
-  height: 96px;
-  border-radius: 126px;
+  padding: clamp(8px, 0.842vw, 16px) clamp(8px, 0.842vw, 16px) clamp(8px, 0.842vw, 16px) clamp(25px, 2.79vw, 53px);
+  width: clamp(240px, 25.79vw, 490px);
+  height: clamp(48px, 5.05vw, 96px);
+  border-radius: clamp(63px, 6.63vw, 126px);
   background-color: rgba(119, 158, 165, 1);
 
   text-decoration: none;
@@ -221,27 +209,27 @@ body {
 
 .team-button p {
   color: rgba(43, 69, 70, 1);
-  font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 2.5em Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
   margin: 0;
-  padding-top: 4px;
+  padding-top: clamp(2px, 0.21vw, 4px);
 }
 
 .arrow {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 63px;
-  max-height: 63px;
+  max-width: clamp(31.5px, 3.315vw, 63px);
+  max-height: clamp(31.5px, 3.315vw, 63px);
   width: 100%;
   height: 100%;
 
   background-color: rgba(220, 228, 231, 1);
-  border-radius: 31.5px;
+  border-radius: clamp(15.75px, 1.657vw, 31.5px);
 }
 
 .arrow svg {
-  max-width: 23.97px;
-  max-height: 23.98px;
+  width: clamp(12px, 1.2615vw, 23.97px);
+  height: clamp(12px, 1.2615vw, 23.98px);
 }
 
 /*--------------------------------------------------------------
@@ -252,8 +240,8 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; 
-  flex-shrink: 1; /* Allow slider to shrink if needed */
-  min-width: 738px; /* Prevent it from becoming smaller than one card */
+  flex-shrink: 1; 
+  min-width: clamp(369px, 38.84vw, 738px) /*738px;  */
 }
 
 .slider__radio {
@@ -262,9 +250,8 @@ body {
 
 .slider__holder {
   position: relative;
-  /* This is the key change for width. It's now fixed to the card width */
-  width: 520px; 
-  height: 750px;
+  width: clamp(260px, 27.3684vw, 520px); /*520px; */
+  height: clamp(375px, 39.4736vw, 750px); /*750px; */
   margin: 0 auto;
   text-align: left; 
 }
@@ -272,7 +259,6 @@ body {
 .slider__item {
   position: absolute;
   top: 0;
-  /* All items are positioned relative to the holder's top-left */
   left: 0; 
   display: block;
   overflow: hidden;
@@ -288,23 +274,22 @@ body {
   z-index: 10;
   display: block;
   width: auto;
-  height: 10px;
-  margin: 50px 0 0;
+  height: clamp(5px, 0.5263vw, 10px); /* 10px; */
+  margin: clamp(25px, 2.6316vw, 50px) 0 0;
   text-align: center; 
 }
 
 .bullets__item {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 4px;
-  border-radius: 6px;
+  width: clamp(5px, 0.5263vw, 10px);
+  height: clamp(5px, 0.5263vw, 10px);
+  margin: 0 clamp(2px, 0.21vw, 4px);
+  border-radius: clamp(3px, 0.315vw, 6px);
   background: rgba(0, 0, 0, 0.2);
   cursor: pointer; 
   transition: background-color 0.3s ease;
 }
 
-/* --- FIX: Added styles for active and hover states --- */
 .bullets__item:hover {
   background: rgba(255, 255, 255, 0.7); 
 }
@@ -312,12 +297,9 @@ body {
     background: #FFFFFF;
 }
 
-/*--------------------------------------------------------------
-4.0 Section
---------------------------------------------------------------*/
+
 .section.slider {
   position: relative;
-  /* FIX: Removed fixed percentage width */
   display: flex;
   flex-direction: column;
   height: auto;
@@ -329,9 +311,9 @@ body {
   flex-direction: column;
   background-color: (255, 255, 255, 1);
   text-align: left;
-  width: 520px;
-  height: 750px;
-  border-radius: 20px;
+  width: clamp(260px, 27.3684vw, 520px); /* 520px; */
+  height: clamp(375px, 39.4737vw, 750px); /* 750px; */
+  border-radius: clamp(10px, 1.0526vw, 20px); /* 20px; */
   overflow: hidden;
 }
 
@@ -344,7 +326,7 @@ body {
     align-content: center;
     justify-content: center;
     color: rgba(43, 69, 70, 1);
-    font: 500 40px e-Ukraine Head, Helvetica, sans-serif;
+    font: 500 2.5em e-Ukraine Head, Helvetica, sans-serif;
 
 }
 
@@ -352,21 +334,21 @@ body {
   box-sizing: border-box;
   width: 100%;
   background-color: rgba(119, 158, 165, 1);
-  padding: 40px 32px;
+  padding: clamp(20px, 2.1053vw, 40px) clamp(16px, 1.6842vw, 32px); /* 40px 32px; */
 }
 
 .team-item-title {
   margin: 0;
-  font: 500 32px e-Ukraine Head, Helvetica, sans-serif;
+  font: 500 2em e-Ukraine Head, Helvetica, sans-serif;
 }
 
 .team-item-description {
-  font: 300 32px e-Ukraine, Helvetica, sans-serif;
+  font: 300 2em e-Ukraine, Helvetica, sans-serif;
 }
 
 
 .news-container {
-  padding: 200px 90px;
+  padding: clamp(100px, 10.5263vw, 200px) clamp(45px, 4.7368vw, 90px); /* 200px 90px; */
 }
 
 .news-text {
@@ -380,28 +362,28 @@ body {
 }
 
 .news-header {
-  font: 700 48px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 700 4em e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
   align-self: stretch;
   margin: 0;
 }
 
 
 .news-paragraph {
-  font: 500 36px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 3em Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
   align-self: stretch;
   margin: 0;
 
-  padding-top: 40px;
+  padding-top: clamp(20px, 2.1053vw, 40px); /* 40px; */
 }
 
 .news-articles {
-  margin-top: 165px;
+  margin-top: clamp(80px, 8.6842vw, 165px); /* 165px; */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  row-gap: 50px;
-  column-gap: 30px;
+  row-gap: clamp(25px, 2.6316vw, 50px); /* 50px; */
+  column-gap: clamp(15px, 1.5789vw, 30px); /* 30px; */
 
 
 }
@@ -412,10 +394,10 @@ body {
   flex-direction: column;
   background-color: #ffffff;
   width: auto;
-  max-width: 430px;
-  height: 650px;
-  padding: 40px;
-  border-radius: 20px;
+  max-width: clamp(210px, 22.6316vw, 430px);/* 430px; */
+  height: clamp(325px, 34.2105vw, 650px); /* 650px; */
+  padding: clamp(20px, 2.1053vw, 40px); /* 40px; */
+  border-radius: clamp(10px, 1.0526vw, 20px); /* 20px; */
 }
 
 .article-header {
@@ -426,7 +408,7 @@ body {
 
 .article-date {
   color: rgba(43, 69, 70, 1);
-  font: 700 24px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 700 1.5em e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
   align-self: center;
 
 }
@@ -434,10 +416,10 @@ body {
 .article-button {
   background-color: rgba(119, 158, 165, 1);
   color: rgba(43, 69, 70, 1);
-  font: 700 20px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
-  width: 125px;
-  height: 50px;
-  border-radius: 20px;
+  font: 700 1.25em e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif; /* 20px */
+  width: clamp(62.5px, 6.5789vw, 125px); /* 125px; */
+  height: clamp(25px, 2.6316vw, 50px); /* 50px; */
+  border-radius: clamp(10px, 1.0526vw, 20px); /* 20px; */
   align-content: center;
   text-align: center;
 }
@@ -453,21 +435,21 @@ body {
   flex-wrap: wrap;
   background-color: rgba(220, 228, 231, 1);
   width: 100%;
-  height: 330px;
-  border-radius: 20px;
-  margin: 35px 0px;
+  height: clamp(165px, 17.3684vw, 330px); /* 330px; */
+  border-radius: clamp(10px, 1.0526vw, 20px); /* 20px; */
+  margin: clamp(17.5px, 1.8421vw, 35px) 0; /* 35px 0px; */
   align-content: center;
   justify-content: center;
   color: rgba(43, 69, 70, 1);
-  font: 700 32px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 700 2em e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif; /* 32px */
 }
 
 .article-text {
   display: flex; 
   flex-direction: column; 
   flex: 1;
-  font: 500 20px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
-  margin: 0 20px;
+  font: 500 1.25em Fixel Text, -apple-system, Roboto, Helvetica, sans-serif; /* 20px */
+  margin: 0 clamp(10px, 1.0526vw, 20px); /* 0 20px; */
 }
 
 .article-description {
@@ -478,6 +460,9 @@ body {
   margin-top: auto;
   text-align: center;
 }
+
+
+
 
 .footer-background {
   display: flex;
@@ -499,12 +484,12 @@ body {
 .footer {
   background-color: #779EA5;
   display: flex;
-  margin-top: 120px;
+  margin-top: clamp(60px, 6.3158vw, 120px);
   width: auto;
   flex-direction: column;
   overflow: hidden;
   align-items: normal;
-  padding: 100px 40px;
+  padding: clamp(50px, 5.2632vw, 100px) clamp(20px, 2.1053vw, 40px);
 }
 
 
@@ -513,38 +498,38 @@ body {
   display: flex;
   width: 100%;
   align-items: normal;
-  gap: 30px 50px;
+  gap: clamp(15px, 1.5789vw, 30px) clamp(25px, 2.6316vw, 50px);
   font-family: e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
   color: rgba(43, 69, 70, 1);
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0px 100px 40px;
-  border-bottom: 1px solid rgba(43, 69, 70, 1);
+  padding: 0 clamp(50px, 5.2632vw, 100px) clamp(20px, 2.1053vw, 40px);
+  border-bottom: clamp(0.5px, .0526vw, 1px) solid rgba(43, 69, 70, 1);
   box-sizing: border-box;
 }
 
 .footer-column ul {
-  padding-left: 45px;
+  padding-left: clamp(22.5px, 2.3684vw, 45px);
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  margin: 40px 0;
+  gap: clamp(20px, 2.1053vw, 40px);
+  margin: clamp(20px, 2.1053vw, 40px) 0;
 }
 
 .footer-column li {
-  padding-left: 10px;
+  padding-left: clamp(5px, 0.5263vw, 10px);
 }
 
 
 .contact-label {
-  font-size: 64px;
+  font-size: 4em;
   font-weight: 400;
 }
 
 
 
 .contact-email {
-  font-size: 48px;
+  font-size: 3em; 
   font-weight: 700;
   text-decoration: underline;
   margin: auto 0;
@@ -554,11 +539,11 @@ body {
 .footer-links {
   width: auto;
   max-width: 100%;
-  margin: 100px 50px;
+  margin: clamp(50px, 5.2632vw, 100px) clamp(25px, 2.6316vw, 50px);
 }
 
 .footer-links-grid {
-  gap: 20px;
+  gap: clamp(10px, 1.0526vw, 20px);
   display: flex;
   justify-content: space-between;
 }
@@ -581,20 +566,20 @@ body {
   align-items: normal;
   flex-wrap: wrap;
   color: rgba(43, 69, 70, 1);
-  font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 2.5em Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 
 .footer-section-title {
   color: #2B4546BA;
-  font-size: 48px;
+  /* font-size: 3em; */
   align-self: stretch;
   margin: 0;
 }
 
 
 .social-link {
-  margin-top: 28px;
+  margin-top: clamp(14px, 1.4737vw, 28px);
   color: inherit;
   text-decoration: none;
 }
@@ -610,14 +595,14 @@ body {
   align-items: start;
   color: #2b4546;
   white-space: nowrap;
-  font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 2.5em Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 
 .contact-link {
   color: rgba(43, 69, 70, 1);
-  font-size: 40px;
-  margin-top: 28px;
+  /* font-size: 2.5em; */
+  margin-top: clamp(14px, 1.4737vw, 28px);
   text-decoration: none;
 }
 
@@ -627,14 +612,14 @@ body {
 
 .phone-title {
   align-self: stretch;
-  margin-top: 53px;
+  margin-top: clamp(25px, 2.7895vw, 53px);
 }
 
 
 .phone-number {
   color: rgba(43, 69, 70, 1);
-  font-size: 36px;
-  margin-top: 25px;
+  /* font-size: 2.25em; */
+  margin-top: clamp(12.5px, 1.3158vw, 25px);
   text-decoration: none;
 }
 
@@ -648,13 +633,13 @@ body {
   flex-direction: column;
   align-items: start;
   color: rgba(43, 69, 70, 1);
-  font: 500 40px Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 500 2.5em Fixel Text, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 
 .footer-nav-link {
   align-self: stretch;
-  margin-top: 25px;
+  margin-top: clamp(12.5px, 1.3158vw, 25px);
   color: inherit;
   text-decoration: none;
 }
@@ -666,12 +651,12 @@ body {
 .footer-bottom {
   max-width: 100%;
   width: min-content;
-  margin: 70px 0 0 70px;
+  margin: clamp(35px, 3.6842vw, 70px) 0 0 clamp(35px, 3.6842vw, 70px);
 }
 
 
 .footer-bottom-grid {
-  gap: 20px;
+  gap: clamp(10px, 1.0526vw, 20px);
   display: flex;
 }
 
@@ -686,7 +671,7 @@ body {
 }
 
 .footer-logo {
-  border-radius: 8px;
+  border-radius: clamp(4px, 0.4211vw, 8px);
   background-color: rgba(43, 69, 70, 1);
   display: flex;
   flex-direction: column;
@@ -694,12 +679,12 @@ body {
   color: rgba(220, 228, 231, 1);
   white-space: nowrap;
   text-align: center;
-  width: 160px;
+  width: clamp(80px, 8.4211vw, 160px);
   justify-content: center;
-  height: 160px;
+  height: clamp(80px, 8.4211vw, 160px);
   margin: 0;
-  padding: 15px;
-  font: 700 55px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  padding: clamp(7.5px, 0.7895vw, 15px);
+  font: 700 3.4375em e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif; /* 55px */
 }
 
 .footer-org-column {
@@ -708,14 +693,14 @@ body {
   align-items: normal;
   line-height: normal;
   width: 59%;
-  margin-left: 20px;
+  margin-left: clamp(10px, 1.0526vw, 20px);
 }
 
 .footer-org-name {
   color: rgba(43, 69, 70, 1);
   align-self: stretch;
   margin: auto 0;
-  font: 700 36px e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
+  font: 700 2em e-Ukraine Head, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 
@@ -725,16 +710,7 @@ body {
 
 
 
-@media (max-width: 1600px) {
-  .team-container {
-    transform: scale(.9)
-  }
 
-  .section.slider {
-    transform: scale(.9);
-  }
-
-}
 
 @media (max-width: 1400px) {
 .team-container {
@@ -753,64 +729,4 @@ body {
   transform: scale(1);
   margin-top: 50px;
 }
-}
-
-@media (max-width: 800px) {
-  .section.slider {
-    transform: scale(.8);
-  }
-
-  .team-container {
-    transform: scale(.8)
-  }
-} 
-
-@media (max-width: 650px) {
-
-  .section.slider {
-    transform: scale(.7);
-  }
-}
-
-@media (max-width: 620px) {
-  .goal-card {
-    transform: scale(.8);
-  }
-
-  .section.slider {
-    transform: scale(.6);
-  }
-
-  .team-container {
-    transform: scale(.8)
-  }
-}
-
-@media (max-width: 540px) {
-  .team-button {
-      width: 100%;
-      padding: 16px;
-  }
-}
-
-@media (max-width: 375px) {
-  .goals-main-title {
-    font-size: 32px;
-  }
-
-  .goals-subtitle {
-    font-size: 24px;
-  }
-
-  .goals-cards-grid {
-    margin-top: 10vw;
-  }
-
-  .goal-title {
-    font-size: 16px;
-  }
-
-  .goal-description {
-    font-size: 12px;
-  }
 }
